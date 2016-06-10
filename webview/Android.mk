@@ -3,9 +3,9 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 
 ZPATH := $(LOCAL_PATH)
 
-#include $(ZPATH)/libwebviewchromium/Android.mk
-#include $(ZPATH)/libwebviewchromium_loader/Android.mk
-#include $(ZPATH)/libwebviewchromium_plat_support/Android.mk
+$(shell mkdir -p $(TARGET_OUT)/lib)
+$(shell mkdir -p $(TARGET_OUT)/lib64)
+$(shell mkdir -p $(TARGET_OUT)/app)
 
 $(shell cp $(ZPATH)/arm/libwebviewchromium.so              $(TARGET_OUT)/lib)
 $(shell cp $(ZPATH)/arm/libwebviewchromium_loader.so       $(TARGET_OUT)/lib)
